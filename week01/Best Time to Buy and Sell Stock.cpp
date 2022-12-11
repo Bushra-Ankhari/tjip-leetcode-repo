@@ -6,13 +6,9 @@ public:
 
 int maxProfit(vector<int>& prices) {
       int n = prices.size();
-      int profit = 0;
-
-     // for(auto i: mxprofsofar){
-      //  cout<<i<<" ";
-     // }
-     int maxprof;
-     int minsell = INT_MAX;
+      int profit = 0;  
+      int maxprof;
+      int minsell = INT_MAX;
       for(int sell=0;sell<n;sell++){
             minsell = min(prices[sell],minsell);
             maxprof = prices[sell]-minsell;
@@ -21,7 +17,6 @@ int maxProfit(vector<int>& prices) {
       return profit;
     }
 };
-
 
 
 /// Time Complexity O(n)
